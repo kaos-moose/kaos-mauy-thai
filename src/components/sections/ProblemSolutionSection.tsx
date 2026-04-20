@@ -1,4 +1,4 @@
-git branch -M mainimport Image from "next/image";
+import Image from "next/image";
 
 const problems = [
   "Gyms are boring and hard to stay consistent with",
