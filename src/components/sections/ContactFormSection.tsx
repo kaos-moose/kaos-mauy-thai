@@ -20,6 +20,13 @@ export default function ContactFormSection() {
   const [form, setForm] = useState<FormState>({ name: "", email: "", phone: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
+  const formatPhone = (value: string) => {
+    const digits = value.replace(/\D/g, "").slice(0, 10);
+    if (digits.length < 4) return digits;
+    if (digits.length < 7) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
@@ -84,9 +91,10 @@ export default function ContactFormSection() {
                   type={type}
                   required
                   value={form[key]}
-                  onChange={(e) =>
-                    setForm((prev) => ({ ...prev, [key]: e.target.value }))
-                  }
+                  onChange={(e) => {
+                    const value = key === "phone" ? formatPhone(e.target.value) : e.target.value;
+                    setForm((prev) => ({ ...prev, [key]: value }));
+                  }}
                   placeholder={placeholder}
                   className="w-full bg-neutral-100 border border-neutral-200 text-neutral-900 placeholder-neutral-400 px-4 py-3 focus:outline-none focus:border-red-600 transition-colors"
                 />
