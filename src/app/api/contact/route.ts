@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
 
   const { error } = await resend.emails.send({
     from: "Kaos Muay Thai <onboarding@resend.dev>",
-    to: "kaos1@kaosmedia-ai.com",
+    to: "crissmoosman1@gmail.com",
     subject: "New Founding Member Inquiry",
     html: `
       <h2>New Founding Member Inquiry</h2>
