@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   const { error } = await resend.emails.send({
-    from: "Kaos Muay Thai <kaos1@kaosmedia-ai.com>",
+    from: "Kaos Muay Thai <onboarding@resend.dev>",
     to: "kaos1@kaosmedia-ai.com",
     subject: "New Founding Member Inquiry",
     html: `
