@@ -55,18 +55,9 @@ export function StarIcon({ className }: IconProps) {
 
 export function MuayThaiKickIcon({ className }: IconProps) {
   return (
-    <svg className={className} viewBox="0 0 36 54" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-      {/* head */}
-      <circle cx="18" cy="5" r="4.5" />
-      {/* torso */}
-      <path d="M18 10 L15 26" />
-      {/* arms — left guard, right raised */}
-      <path d="M15 15 L6 12" />
-      <path d="M15 15 L24 11" />
-      {/* standing leg — bent back */}
-      <path d="M15 26 L11 36 L8 46" />
-      {/* kicking leg — extended forward/up */}
-      <path d="M15 26 L25 31 L35 24" />
+    <svg className={className} viewBox="0 0 36 44" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M18 2 L33 7 L33 24 C33 34 18 42 18 42 C18 42 3 34 3 24 L3 7 Z" />
+      <text x="18" y="27" textAnchor="middle" fontSize="13" fontWeight="bold" fontFamily="sans-serif" stroke="none" fill="currentColor" letterSpacing="0.5">MT</text>
     </svg>
   );
 }
@@ -74,11 +65,8 @@ export function MuayThaiKickIcon({ className }: IconProps) {
 export function KravMagaShieldIcon({ className }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 36 44" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-      {/* shield */}
       <path d="M18 2 L33 7 L33 24 C33 34 18 42 18 42 C18 42 3 34 3 24 L3 7 Z" />
-      {/* interior "A" / chevron motif */}
-      <path d="M11 32 L18 12 L25 32" />
-      <path d="M13 26 L23 26" />
+      <text x="18" y="27" textAnchor="middle" fontSize="13" fontWeight="bold" fontFamily="sans-serif" stroke="none" fill="currentColor" letterSpacing="0.5">KM</text>
     </svg>
   );
 }
