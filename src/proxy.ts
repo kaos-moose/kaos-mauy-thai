@@ -19,7 +19,13 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  return NextResponse.redirect(new URL("/admin/login", request.url));
+  // Use a relative Location header instead of NextResponse.redirect(new URL(..., request.url))
+  // because in prod request.url reflects the internal Lambda origin (localhost:3000) behind
+  // CloudFront/Amplify and would leak that into the redirect target.
+  return new NextResponse(null, {
+    status: 307,
+    headers: { Location: "/admin/login" },
+  });
 }
 
 export const config = {
