@@ -1,24 +1,8 @@
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocumentClient, ScanCommand } from "@aws-sdk/lib-dynamodb";
+import { ScanCommand } from "@aws-sdk/lib-dynamodb";
+import { dynamo, FOUNDERS_TABLE, type FounderRecord } from "@/lib/dynamo";
 
 // Route is dynamic — always pull fresh records on each request.
 export const dynamic = "force-dynamic";
-
-const FOUNDERS_TABLE = "kaosmt-founder-applications";
-
-// Module-level singleton, reused across warm Lambda invocations.
-const dynamo = DynamoDBDocumentClient.from(new DynamoDBClient({}));
-
-type FounderRecord = {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  membershipInterest: string;
-  whyJoin: string;
-  submittedAt: string;
-};
 
 const membershipLabels: Record<string, string> = {
   "muay-thai": "Muay Thai Only",

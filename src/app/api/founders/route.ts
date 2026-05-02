@@ -1,33 +1,15 @@
 import { randomUUID } from "node:crypto";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocumentClient, PutCommand, ScanCommand } from "@aws-sdk/lib-dynamodb";
+import { PutCommand, ScanCommand } from "@aws-sdk/lib-dynamodb";
 import { Resend } from "resend";
 import { ADMIN_COOKIE_NAME, verifyAdminSession } from "@/lib/adminAuth";
+import { dynamo, FOUNDERS_TABLE, type FounderRecord } from "@/lib/dynamo";
 
 const membershipLabels: Record<string, string> = {
   "muay-thai": "Muay Thai Only",
   "krav-maga": "Krav Maga Only",
   "full-access": "Full Access (Both)",
-};
-
-const FOUNDERS_TABLE = "kaosmt-founder-applications";
-
-// Module-level singleton — reused across warm Lambda invocations.
-// Region and credentials resolved from the default AWS SDK provider chain
-// (env vars locally, IAM service role in Amplify SSR Lambda).
-const dynamo = DynamoDBDocumentClient.from(new DynamoDBClient({}));
-
-type FounderRecord = {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  membershipInterest: string;
-  whyJoin: string;
-  submittedAt: string;
 };
 
 export async function POST(request: NextRequest) {
