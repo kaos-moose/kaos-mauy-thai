@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import FoundersHeader from "@/components/layout/FoundersHeader";
+import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "KAOSMT Founders Program | Be One of the First 50 | Helena, MT",
+  title: "KAOSMT Founders Membership | Helena, MT",
   description:
-    "Join the KAOSMT Founders Program — locked-in pricing for life, exclusive perks, and permanent Founder status. Only 50 spots. First come, first served.",
+    "Become a KAOSMT founding member — early access, beginner-friendly classes, Muay Thai and Krav Maga training. Limited spots available in Helena, MT.",
   openGraph: {
-    title: "KAOSMT Founders Program | Be One of the First 50",
+    title: "KAOSMT Founders Membership | Helena, MT",
     description:
-      "Locked-in pricing, exclusive gear, priority class access, and permanent Founder status. Only 50 spots available in Helena, MT.",
+      "Early access, founding member recognition, and priority updates. Limited spots available before opening.",
     type: "website",
   },
 };
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function FoundersLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <FoundersHeader />
+      <Header />
       {children}
       <Footer />
     </>

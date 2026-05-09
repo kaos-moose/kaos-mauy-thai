@@ -62,16 +62,18 @@ export default function HeroSection() {
             <span className="text-white/50"> in Helena, MT</span>
           </p>
 
-          <h1
-            className="uppercase leading-[0.88] mb-5 text-white"
-            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.8rem,7vw,5.5rem)" }}
-          >
-            Helena&apos;s New
-            <br />
-            <span className="text-red-500 md:text-red-600">Muay Thai</span>
-            <br />
-            &amp; Krav Maga Academy
-          </h1>
+          <div className="mb-5 flex justify-center md:justify-start">
+            <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden flex-shrink-0">
+              <Image
+                src="/kaosmt-logo.jpg"
+                alt="KAOSMT — Muay Thai & Krav Maga Academy"
+                width={340}
+                height={340}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+          </div>
 
           <div className="w-14 h-[3px] bg-red-600 mb-6 mx-auto md:mx-0" />
 
@@ -103,11 +105,11 @@ export default function HeroSection() {
           {/* CTA + lock */}
           <div className="w-full md:w-[52%] min-w-0 flex flex-col items-center md:items-start gap-3">
             <a
-              href="#contact-form"
+              href="/founders"
               className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-bold uppercase tracking-widest text-sm px-7 py-4 transition-colors duration-200 w-full md:w-auto justify-center md:justify-start"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Claim Your Founding Spot
+              Claim Your Founders Spot
               <span className="text-base leading-none">&rsaquo;</span>
             </a>
             <p className="flex items-center gap-2 text-white/35 text-[11px] uppercase tracking-widest">

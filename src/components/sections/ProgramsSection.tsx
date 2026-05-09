@@ -41,7 +41,7 @@ export default function ProgramsSection() {
               key={program.title}
               className={`relative p-10 flex flex-col ${
                 program.featured
-                  ? "bg-red-950/30 ring-1 ring-red-600"
+                  ? "bg-red-950/40 ring-1 ring-red-600"
                   : "bg-neutral-900"
               }`}
             >
