@@ -151,28 +151,37 @@ export default function AboutPage() {
 
               <div className="space-y-4 text-neutral-400 text-sm leading-relaxed">
                 <p>
-                  Criss is a lifetime student of Budo and a firm believer in Bruce Lee&apos;s
-                  philosophy — <em className="text-neutral-300">&ldquo;Using no way as way, using no
+                  Criss is a lifelong student of Budo and a firm believer in Bruce Lee&apos;s
+                  philosophy: <em className="text-neutral-300">&ldquo;Using no way as way, using no
                   limitation as limitation. Absorb what is useful, and reject what is useless for
                   you.&rdquo;</em>
                 </p>
                 <p>
-                  He began Police Athletic League Boxing and kickboxing at age ten, accumulating over
-                  30 amateur boxing and kickboxing matches by sixteen. He went on to compete in Muay
-                  Thai professionally with over 30 fights.
+                  Criss began training at age ten through Police Athletic League boxing and
+                  kickboxing, and by sixteen was competing in amateur boxing and kickboxing. His
+                  experience later expanded into professional Muay Thai and MMA competition, giving
+                  him a deep foundation in striking, pressure testing, and practical application.
                 </p>
                 <p>
-                  After serving in the US Army&apos;s 3/75 Ranger Regiment with multiple
-                  deployments, Criss returned to Arizona and pursued Krav Maga — earning full
-                  certification as an instructor and law enforcement trainer under Darrin Levine of
-                  Krav Maga Worldwide.
+                  After serving in the U.S. Army&apos;s 3/75 Ranger Regiment with multiple
+                  deployments, Criss continued building on his real-world training experience. He is
+                  also a certified NRA firearms instructor with more than 30 years of firearms
+                  experience, teaching safety, fundamentals of marksmanship, drawstroke, stoppage
+                  clearing, and common beginner mistakes. His instruction follows the KISS —
+                  &ldquo;Keep It Simple&rdquo; — approach to help students build confidence and
+                  develop realistic skills that hold up under stress.
                 </p>
                 <p>
-                  He opened and operated multiple schools across the Phoenix metro area, coaching
-                  Krav Maga and Muay Thai for nearly ten years — training professional and amateur
-                  fighters across MMA, Muay Thai, and boxing, while consulting with the Phoenix Gang
-                  Unit on de-escalation, situational awareness, and weapon retention under high
-                  adrenaline conditions.
+                  Criss later returned to Arizona and continued his pursuit of real-world
+                  self-defense through Krav Maga, earning full instructor and law enforcement
+                  trainer certification under Darrin Levine of Krav Maga Worldwide.
+                </p>
+                <p>
+                  Criss went on to open and operate multiple schools across the Phoenix metro area,
+                  coaching Krav Maga and Muay Thai for nearly ten years. During that time, he
+                  trained professional and amateur fighters across MMA, Muay Thai, and boxing, while
+                  also consulting with the Phoenix Gang Unit on de-escalation, situational
+                  awareness, weapon retention, and performance under high-adrenaline conditions.
                 </p>
               </div>
             </div>
