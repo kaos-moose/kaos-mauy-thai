@@ -37,7 +37,8 @@ export default function SchedulePage() {
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full">
+          <div className="gymdesk-schedule" attr-gym="AnQgQ" attr-program="all"></div>
+          {/* <table className="w-full">
             <thead>
               <tr className="border-b border-white/10">
                 <th className="text-left text-neutral-400 text-xs uppercase tracking-widest font-bold py-4 pr-8 min-w-[120px]">
@@ -66,9 +67,23 @@ export default function SchedulePage() {
                   <td className="text-neutral-300 text-sm py-5 pr-8">{row.kravMaga}</td>
                   <td className="text-neutral-300 text-sm py-5">{row.muayThai}</td>
                 </tr>
-              ))}
+              ))} 
+              
             </tbody>
-          </table>
+          </table> */}
+        </div>
+
+        <div className="text-center mt-10">
+          <a
+            href="https://kaosmt.gymdesk.com/signup/v/An7yd"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-bold uppercase tracking-widest text-sm px-8 py-4 transition-colors duration-200"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Sign Up Now
+            <span className="text-base leading-none">&rsaquo;</span>
+          </a>
         </div>
 
         {/* Founder Pricing */}

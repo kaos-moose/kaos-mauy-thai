@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anton, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const anton = Anton({
@@ -34,6 +35,7 @@ export default function RootLayout({
     <html lang="en" className={`${anton.variable} ${inter.variable}`}>
       <body className={`${inter.className} antialiased`}>
         {children}
+        <Script src="https://app.gymdesk.com/js/widgets.js" />
       </body>
     </html>
   );
