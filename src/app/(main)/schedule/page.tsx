@@ -37,7 +37,7 @@ export default function SchedulePage() {
         </div>
 
         <p className="text-center text-neutral-400 text-sm mb-6">
-          Official schedule starts July 18th — switch the calendar to the week of July 12th to see the current schedule.
+          Official schedule starts July 18th — switch the calendar to the week of July 12th to see the current schedule. Once the calendar loads click the 18th and the schedule will update.
         </p>
 
         <div className="overflow-x-auto">
