@@ -36,6 +36,10 @@ export default function SchedulePage() {
           <div className="w-14 h-[3px] bg-red-600 mt-6 mx-auto" />
         </div>
 
+        <p className="text-center text-neutral-400 text-sm mb-6">
+          Official schedule starts July 18th — switch the calendar to the week of July 12th to see the current schedule.
+        </p>
+
         <div className="overflow-x-auto">
           <div className="gymdesk-schedule" attr-gym="AnQgQ" attr-program="all"></div>
           {/* <table className="w-full">
