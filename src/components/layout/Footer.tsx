@@ -1,6 +1,6 @@
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Founders Membership", href: "/founders" },
+  { label: "Charter Membership", href: "/charter" },
   { label: "Schedule", href: "/schedule" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

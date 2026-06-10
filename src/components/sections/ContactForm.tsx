@@ -112,7 +112,7 @@ export default function ContactForm() {
           className="block w-full bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-bold uppercase tracking-wider px-8 py-4 text-base transition-colors duration-200 cursor-pointer disabled:opacity-60"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          {status === "loading" ? "Sending…" : "Claim Your Founders Spot"}
+          {status === "loading" ? "Sending…" : "Claim Your Charter Spot"}
         </button>
       </div>
     </form>

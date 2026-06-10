@@ -43,3 +43,16 @@ export type FounderRecord = {
   whyJoin: string;
   submittedAt: string;
 };
+
+export const CHARTER_TABLE = "kaosmt-charter-applications";
+
+export type CharterRecord = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  membershipInterest: string;
+  whyJoin: string;
+  submittedAt: string;
+};

@@ -15,9 +15,9 @@ const schedule = [
 ];
 
 const pricing = [
-  { membership: "Muay Thai Only", regular: "$130/mo", founder: "$110/mo", best: false },
-  { membership: "Krav Maga Only", regular: "$130/mo", founder: "$110/mo", best: false },
-  { membership: "Full Access", regular: "$170/mo", founder: "$140/mo", best: true },
+  { membership: "Muay Thai Only", regular: "$130/mo", charter: "$120/mo", best: false },
+  { membership: "Krav Maga Only", regular: "$130/mo", charter: "$120/mo", best: false },
+  { membership: "Unlimited", regular: "$170/mo", charter: "$160/mo", best: true },
 ];
 
 export default function SchedulePage() {
@@ -90,7 +90,7 @@ export default function SchedulePage() {
           </a>
         </div>
 
-        {/* Founder Pricing */}
+        {/* Charter Pricing */}
         <div className="mt-28 text-center mb-16">
           <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-3">
             Exclusive Rates
@@ -99,7 +99,7 @@ export default function SchedulePage() {
             className="text-5xl md:text-6xl text-white uppercase"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Founder Pricing
+            Charter Pricing
           </h2>
           <div className="w-14 h-[3px] bg-red-600 mt-5 mx-auto" />
         </div>
@@ -115,7 +115,7 @@ export default function SchedulePage() {
                   Regular Rate
                 </th>
                 <th className="text-left text-red-600 text-xs uppercase tracking-widest font-bold px-6 py-4">
-                  Founder Rate
+                  Charter Rate
                 </th>
               </tr>
             </thead>
@@ -139,7 +139,7 @@ export default function SchedulePage() {
                     {row.regular}
                   </td>
                   <td className="px-6 py-5 text-red-500 font-bold text-lg">
-                    {row.founder}
+                    {row.charter}
                   </td>
                 </tr>
               ))}
@@ -148,16 +148,16 @@ export default function SchedulePage() {
         </div>
 
         <p className="text-center text-neutral-500 text-xs uppercase tracking-widest mt-6 mb-10">
-          Founder pricing is locked in for life while membership remains active.
+          Charter pricing is locked in for life while membership remains active.
         </p>
 
         <div className="text-center">
           <a
-            href="/founders"
+            href="/charter"
             className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-bold uppercase tracking-widest text-sm px-8 py-4 transition-colors duration-200"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Lock In My Rate
+            Lock In My Charter Rate
             <span className="text-base leading-none">&rsaquo;</span>
           </a>
         </div>

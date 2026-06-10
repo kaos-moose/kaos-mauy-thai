@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Founders Membership", href: "/founders" },
+  { label: "Charter Membership", href: "/charter" },
   { label: "Schedule", href: "/schedule" },
   { label: "About KAOSMT", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -45,11 +45,11 @@ export default function Header() {
         </nav>
 
         <Button
-          href="/founders"
+          href="/charter"
           size="md"
           className="hidden md:inline-block flex-shrink-0 text-xs tracking-widest whitespace-nowrap"
         >
-          Claim Your Founders Spot
+          Claim Your Charter Spot
         </Button>
 
         <button
@@ -95,8 +95,8 @@ export default function Header() {
             </a>
           ))}
           <div className="pt-4">
-            <Button href="/founders" size="md" className="w-full text-center text-xs tracking-widest">
-              Claim Your Founders Spot
+            <Button href="/charter" size="md" className="w-full text-center text-xs tracking-widest">
+              Claim Your Charter Spot
             </Button>
           </div>
         </div>
