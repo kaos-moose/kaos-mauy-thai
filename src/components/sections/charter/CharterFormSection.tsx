@@ -15,7 +15,7 @@ interface FormState {
 const membershipOptions = [
   { value: "", label: "Select a membership..." },
   { value: "muay-thai", label: "Muay Thai Only ($120/mo)" },
-  { value: "krav-maga", label: "Krav Maga Only ($120/mo)" },
+  { value: "krav-maga", label: "Self Defense Only ($120/mo)" },
   { value: "unlimited", label: "Unlimited ($160/mo)" },
 ];
 

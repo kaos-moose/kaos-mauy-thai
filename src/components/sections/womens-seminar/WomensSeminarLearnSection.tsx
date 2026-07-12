@@ -35,7 +35,7 @@ export default function WomensSeminarLearnSection() {
         }}
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto">
+      <div className="relative z-10 max-w-[1080px] mx-auto">
         <div className="flex items-center gap-4 mb-12 justify-center">
           <div className="flex-1 max-w-[80px] h-px bg-red-600" />
           <h2

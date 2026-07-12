@@ -3,18 +3,42 @@
 import { useState } from "react";
 
 interface FormState {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
+  program: string;
+  preferredTime: string;
   message: string;
+  referralSource: string;
 }
+
+const programOptions = [
+  { value: "", label: "Select a program..." },
+  { value: "muay-thai", label: "Muay Thai" },
+  { value: "self-defense", label: "KAOS Self-Defense System" },
+  { value: "conditioning", label: "Muay Thai Strength & Conditioning" },
+  { value: "womens-self-defense", label: "Women's Self-Defense" },
+  { value: "private-training", label: "Private Training" },
+  { value: "grand-opening", label: "Grand Opening" },
+  { value: "general", label: "General Question" },
+];
 
 const inputClass =
   "w-full bg-neutral-100 border border-neutral-200 text-neutral-900 placeholder-neutral-400 px-4 py-3 focus:outline-none focus:border-red-600 transition-colors";
 const labelClass = "block text-neutral-500 text-xs uppercase tracking-widest mb-2";
 
 export default function ContactForm() {
-  const [form, setForm] = useState<FormState>({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState<FormState>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    program: "",
+    preferredTime: "",
+    message: "",
+    referralSource: "",
+  });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const formatPhone = (value: string) => {
@@ -50,26 +74,42 @@ export default function ContactForm() {
           className="text-2xl text-neutral-900 uppercase mb-3"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Message Received!
+          Message Received
         </h3>
-        <p className="text-neutral-500">We&apos;ll be in touch soon.</p>
+        <p className="text-neutral-500">
+          Thank you for contacting KAOSMT. We will respond as soon as possible.
+        </p>
       </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <div>
-        <label className={labelClass}>Name</label>
-        <input
-          type="text"
-          required
-          value={form.name}
-          onChange={(e) => set("name", e.target.value)}
-          placeholder="Your name"
-          className={inputClass}
-        />
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className={labelClass}>First Name</label>
+          <input
+            type="text"
+            required
+            value={form.firstName}
+            onChange={(e) => set("firstName", e.target.value)}
+            placeholder="First"
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className={labelClass}>Last Name</label>
+          <input
+            type="text"
+            required
+            value={form.lastName}
+            onChange={(e) => set("lastName", e.target.value)}
+            placeholder="Last"
+            className={inputClass}
+          />
+        </div>
       </div>
+
       <div>
         <label className={labelClass}>Email</label>
         <input
@@ -81,6 +121,7 @@ export default function ContactForm() {
           className={inputClass}
         />
       </div>
+
       <div>
         <label className={labelClass}>Phone</label>
         <input
@@ -91,20 +132,61 @@ export default function ContactForm() {
           className={inputClass}
         />
       </div>
+
+      <div>
+        <label className={labelClass}>Program of Interest</label>
+        <select
+          required
+          value={form.program}
+          onChange={(e) => set("program", e.target.value)}
+          className={`${inputClass} cursor-pointer`}
+        >
+          {programOptions.map((o) => (
+            <option key={o.value} value={o.value} disabled={o.value === ""}>
+              {o.label}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label className={labelClass}>Preferred Class Time</label>
+        <input
+          type="text"
+          value={form.preferredTime}
+          onChange={(e) => set("preferredTime", e.target.value)}
+          placeholder="e.g. Weekday evenings, Saturday mornings"
+          className={inputClass}
+        />
+      </div>
+
       <div>
         <label className={labelClass}>Message</label>
         <textarea
           required
           value={form.message}
           onChange={(e) => set("message", e.target.value)}
-          placeholder="Your message..."
-          rows={5}
+          placeholder="Questions, goals, or anything else you would like us to know..."
+          rows={4}
           className={`${inputClass} resize-none`}
         />
       </div>
+
+      <div>
+        <label className={labelClass}>How Did You Hear About Us?</label>
+        <input
+          type="text"
+          value={form.referralSource}
+          onChange={(e) => set("referralSource", e.target.value)}
+          placeholder="Facebook, Instagram, friend, Google, etc."
+          className={inputClass}
+        />
+      </div>
+
       {status === "error" && (
         <p className="text-red-600 text-sm">Something went wrong. Please try again.</p>
       )}
+
       <div className="pt-2">
         <button
           type="submit"
@@ -112,7 +194,7 @@ export default function ContactForm() {
           className="block w-full bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-bold uppercase tracking-wider px-8 py-4 text-base transition-colors duration-200 cursor-pointer disabled:opacity-60"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          {status === "loading" ? "Sending…" : "Claim Your Charter Spot"}
+          {status === "loading" ? "Sending…" : "Send Message"}
         </button>
       </div>
     </form>

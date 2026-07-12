@@ -1,131 +1,200 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "About KAOSMT | Helena, MT",
   description:
-    "KAOSMT is a Muay Thai and Krav Maga academy built for Helena, Montana. Real training, real confidence, supportive community.",
+    "KAOSMT was created to provide Helena with serious Muay Thai, practical self-defense, and high-level conditioning in a professional, beginner-friendly environment.",
 };
+
+const philosophy = [
+  {
+    title: "Practical",
+    body: "Students should understand why they are doing each drill and how it connects to a real skill.",
+  },
+  {
+    title: "Progressive",
+    body: "Training should begin with strong fundamentals and increase in complexity as the student develops.",
+  },
+  {
+    title: "Challenging",
+    body: "Growth requires effort. Classes should push students while remaining safe and productive.",
+  },
+  {
+    title: "Accountable",
+    body: "Students and coaches should maintain high standards for effort, safety, respect, and consistency.",
+  },
+  {
+    title: "Adaptable",
+    body: "Every student arrives with different experience, fitness, and physical capabilities. Good coaching meets the student where they are without lowering the standard of development.",
+  },
+];
+
+const facilityHighlights = [
+  "Dedicated matted training area",
+  "Heavy-bag stations",
+  "Muay Thai pad and partner-training equipment",
+  "Strength and conditioning equipment",
+  "Professional lighting and branded training space",
+  "Changing and storage areas",
+  "Founders wall",
+  "Clean, organized training environment",
+];
+
+const values = [
+  {
+    word: "Strength",
+    body: "Strength is developed through consistent effort.",
+  },
+  {
+    word: "Discipline",
+    body: "Discipline is built by showing up when motivation fades.",
+  },
+  {
+    word: "Focus",
+    body: "Focus is the ability to remain present and perform when pressure increases.",
+  },
+];
 
 export default function AboutPage() {
   return (
-    <main className="bg-neutral-950 min-h-screen">
-      {/* Intro */}
-      <section className="relative pt-32 pb-24 px-4 overflow-hidden">
+    <main className="bg-neutral-950">
+
+      {/* Hero */}
+      <section className="relative pt-36 pb-24 px-6 overflow-hidden" style={{ minHeight: "min(70vh, 560px)" }}>
         <Image
-          src="/section-5.jpg"
+          src="/kaos-mt-hero-banner-3.jpg"
           fill
-          alt=""
-          className="object-cover object-center"
-          aria-hidden="true"
+          alt="KAOSMT training"
+          className="object-cover"
+          style={{ objectPosition: "-12% center" }}
           priority
         />
-        <div className="absolute inset-0 bg-neutral-950/80" />
-        <div className="relative z-10 max-w-3xl mx-auto">
-          <div className="text-center mb-16">
-            <h1
-              className="text-5xl md:text-6xl text-white uppercase leading-tight"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              Built for Helena.
-              <br />
-              Built for You.
-            </h1>
-            <div className="w-14 h-[3px] bg-red-600 mt-6 mx-auto" />
-          </div>
-
-          <div className="space-y-8 text-neutral-300 text-lg leading-relaxed">
-            <p>
-              KAOSMT is a Muay Thai and Krav Maga academy created for people who want real training,
-              real confidence, and a supportive community.
-            </p>
-            <p>
-              Whether you are brand new or have experience, KAOSMT is built to help you improve your
-              fitness, learn practical skills, and train with purpose.
-            </p>
-          </div>
-
-          <div className="mt-20 border-l-4 border-red-600 pl-8">
-            <p
-              className="text-2xl md:text-3xl text-white uppercase"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              Strong body. Sharp mind. Relentless spirit.
-            </p>
-          </div>
+        <div className="absolute inset-0 bg-neutral-950/75" />
+        <div className="relative z-10 max-w-[1080px] mx-auto flex flex-col justify-center h-full">
+          <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-4">
+            About KAOSMT
+          </p>
+          <h1
+            className="text-5xl sm:text-6xl md:text-7xl text-white uppercase leading-none mb-6"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Built for People Who Want{" "}
+            <span className="text-red-600">More</span>
+          </h1>
+          <div className="w-14 h-[3px] bg-red-600 mb-8" />
+          <p className="text-neutral-300 text-xl max-w-2xl leading-relaxed">
+            KAOSMT was created to provide Helena with serious Muay Thai, practical
+            self-defense, and high-level conditioning in a professional,
+            beginner-friendly environment.
+          </p>
         </div>
       </section>
 
-      {/* KAOSMT Standard */}
-      <section className="bg-neutral-950 py-24 px-4 text-center">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-3">
-            The KAOSMT Standard
+      {/* Mission */}
+      <section className="py-24 px-6">
+        <div className="max-w-[1080px] mx-auto">
+          <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-4">
+            Our Mission
           </p>
           <h2
-            className="text-5xl md:text-6xl text-white uppercase mb-4"
+            className="text-4xl md:text-5xl text-white uppercase mb-6"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            KAOSMT Standard
+            Why KAOSMT Exists
           </h2>
-          <div className="w-14 h-[3px] bg-red-600 mx-auto mb-12" />
-
-          <div className="grid grid-cols-3 gap-4 mb-12">
-            {["Hard Work", "Mutual Respect", "No Ego"].map((value) => (
-              <div
-                key={value}
-                className="border border-red-600 px-4 py-5 text-white text-sm font-bold uppercase tracking-wider flex items-center justify-center text-center"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                {value}
-              </div>
-            ))}
+          <div className="w-14 h-[3px] bg-red-600 mb-10" />
+          <div className="space-y-6 text-neutral-300 text-lg leading-relaxed">
+            <p>Most people want to become stronger, more confident, and more capable.</p>
+            <p>
+              The problem is that many training environments are either too intimidating for
+              beginners, too focused on fitness without practical skill, or too disconnected
+              from the realities of personal safety.
+            </p>
+            <p className="text-white font-medium">KAOSMT was built to close that gap.</p>
+            <p>
+              Our mission is to give ordinary people access to purposeful training that
+              improves physical fitness, develops real skills, and strengthens the mindset
+              required to perform under pressure.
+            </p>
           </div>
-
-          <p className="text-neutral-400 text-base mb-10">
-            If that sounds like your kind of gym, we&apos;d love to meet you.
-          </p>
-
-          <p className="text-neutral-500 text-xs uppercase tracking-widest mb-5">
-            Build it with us.
-          </p>
-          <a
-            href="/founders"
-            className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-bold uppercase tracking-widest text-sm px-8 py-4 transition-colors duration-200"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            Become a Founder
-            <span className="text-base leading-none">&rsaquo;</span>
-          </a>
         </div>
       </section>
 
-      {/* Coaches */}
-      <section className="relative py-24 px-4 overflow-hidden">
-        <Image
-          src="/hero-pic-2.webp"
-          fill
-          alt=""
-          className="object-cover object-center"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-neutral-950/85" />
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-3">
-              Meet the Coaches
+      {/* Training Philosophy */}
+      <section className="bg-neutral-900 py-24 px-6">
+        <div className="max-w-[1080px] mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left column: header + philosophy cards */}
+            <div>
+              <div className="mb-10">
+                <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-4">
+                  Our Training Philosophy
+                </p>
+                <h2
+                  className="text-4xl md:text-5xl text-white uppercase"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  Train With Purpose
+                </h2>
+                <div className="w-14 h-[3px] bg-red-600 mt-6" />
+                <p className="text-neutral-400 text-lg mt-6">
+                  We believe effective training should be:
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-px bg-white/5">
+                {philosophy.map((item) => (
+                  <div key={item.title} className="bg-neutral-950 p-8">
+                    <div className="w-8 h-[2px] bg-red-600 mb-5" />
+                    <h3
+                      className="text-xl text-white uppercase mb-3"
+                      style={{ fontFamily: "var(--font-display)" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-neutral-400 text-sm leading-relaxed">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right column: image */}
+            <div className="relative w-full h-[500px] md:h-full md:min-h-[700px] md:sticky md:top-8">
+              <Image
+                src="/kaos-site-pic-conditioning-3.png"
+                alt="Conditioning training at KAOS Muay Thai"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder / Coach */}
+      <section className="py-24 px-6">
+        <div className="max-w-[1080px] mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-4">
+              Founder &amp; Coach
             </p>
             <h2
               className="text-4xl md:text-5xl text-white uppercase"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Who We Are
+              Built From Experience
             </h2>
-            <div className="w-14 h-[3px] bg-red-600 mt-5 mx-auto" />
+            <div className="w-14 h-[3px] bg-red-600 mt-6 mx-auto" />
+            <p className="text-neutral-400 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
+              KAOSMT brings together decades of experience in martial arts, defensive
+              training, physical conditioning, leadership, and high-pressure environments.
+            </p>
           </div>
 
-          {/* Coach card */}
-          <div className="grid md:grid-cols-2 gap-0 bg-neutral-950">
+          <div className="grid md:grid-cols-2 gap-0 bg-neutral-900">
             <div className="relative flex items-baseline bg-black overflow-hidden">
               <Image
                 src="/kaos-coach-criss.jpg"
@@ -134,7 +203,7 @@ export default function AboutPage() {
                 alt="Criss Moosman — Head Coach, KAOSMT"
                 className="w-full h-auto object-contain"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-neutral-950" />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-neutral-900" />
             </div>
 
             <div className="p-10 md:p-14 flex flex-col justify-center">
@@ -148,44 +217,131 @@ export default function AboutPage() {
                 Criss Moosman
               </h3>
               <div className="w-10 h-[2px] bg-red-600 mb-8" />
-
               <div className="space-y-4 text-neutral-400 text-sm leading-relaxed">
                 <p>
-                  Criss is a lifelong student of Budo and a firm believer in Bruce Lee&apos;s
-                  philosophy: <em className="text-neutral-300">&ldquo;Using no way as way, using no
-                  limitation as limitation. Absorb what is useful, and reject what is useless for
-                  you.&rdquo;</em>
+                  Criss is a lifelong student of Budo and a firm believer in Bruce Lee&apos;s philosophy:
                 </p>
                 <p>
-                  Criss began training at age ten through Police Athletic League boxing and
-                  kickboxing, and by sixteen was competing in amateur boxing and kickboxing. His
-                  experience later expanded into professional Muay Thai and MMA competition, giving
-                  him a deep foundation in striking, pressure testing, and practical application.
+                  <em className="text-neutral-300">
+                    &ldquo;Using no way as way. Using no limitation as limitation. Absorb what is useful,
+                    reject what is useless, and add what is specifically your own.&rdquo;
+                  </em>
                 </p>
                 <p>
-                  After serving in the U.S. Army&apos;s 3/75 Ranger Regiment with multiple
-                  deployments, Criss continued building on his real-world training experience. He is
-                  also a certified NRA firearms instructor with more than 30 years of firearms
-                  experience, teaching safety, fundamentals of marksmanship, drawstroke, stoppage
-                  clearing, and common beginner mistakes. His instruction follows the KISS —
-                  &ldquo;Keep It Simple&rdquo; — approach to help students build confidence and
-                  develop realistic skills that hold up under stress.
+                  His approach to teaching reflects that philosophy—drawing from multiple disciplines to
+                  develop practical skills that perform under pressure rather than adhering to any single style.
                 </p>
                 <p>
-                  Criss later returned to Arizona and continued his pursuit of real-world
-                  self-defense through Krav Maga, earning full instructor and law enforcement
-                  trainer certification under Darrin Levine of Krav Maga Worldwide.
+                  Criss began training at the age of ten through Police Athletic League boxing and kickboxing.
+                  By sixteen, he was competing in amateur boxing and kickboxing before advancing into
+                  professional Muay Thai and mixed martial arts competition. Those years of competition
+                  provided a strong foundation in striking, timing, pressure testing, and the practical
+                  application of fighting skills.
                 </p>
                 <p>
-                  Criss went on to open and operate multiple schools across the Phoenix metro area,
-                  coaching Krav Maga and Muay Thai for nearly ten years. During that time, he
-                  trained professional and amateur fighters across MMA, Muay Thai, and boxing, while
-                  also consulting with the Phoenix Gang Unit on de-escalation, situational
-                  awareness, weapon retention, and performance under high-adrenaline conditions.
+                  Criss served in the U.S. Army&apos;s 3/75 Ranger
+                  Regiment, completing multiple deployments. That experience reinforced the importance of
+                  decision-making under stress, situational awareness, discipline, and performance when the
+                  stakes are real—principles that continue to influence his training methodology today.
+                </p>
+                <p>
+                  In addition to his martial arts background, Criss is a certified NRA firearms instructor
+                  with more than three decades of firearms experience. He has instructed students in firearms
+                  safety, marksmanship fundamentals, drawstroke mechanics, malfunction clearance, and
+                  defensive shooting principles for new and experienced shooters alike.
+                </p>
+                <p>
+                  Criss later founded and operated multiple combat sports academies throughout the Phoenix
+                  metropolitan area, where he spent nearly a decade coaching self-defense and Muay Thai.
+                  During that time, he coached both amateur and professional competitors in boxing, Muay Thai,
+                  and MMA while also working with the Phoenix Gang Unit on topics including situational
+                  awareness, verbal de-escalation, weapon retention, and performance under high-adrenaline
+                  conditions.
+                </p>
+                <p>
+                  Today, Criss is the founder and head instructor of KAOSMT, where he coaches Muay Thai and
+                  the KAOS Self Defense System. His instruction combines proven striking fundamentals,
+                  practical self-defense concepts, stress-based training, and mindset development to prepare
+                  students not just for competition, but for the realities of personal protection and
+                  everyday life.
                 </p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Facility */}
+      <section className="relative py-24 px-6 overflow-hidden">
+        <Image
+          src="/kaos-mt-hero-banner-1.webp"
+          fill
+          alt="KAOSMT facility"
+          className="object-cover"
+          style={{ objectPosition: "center" }}
+        />
+        <div className="absolute inset-0 bg-neutral-950/80" />
+        <div className="relative z-10 max-w-[1080px] mx-auto">
+          <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-4">
+            Our Facility
+          </p>
+          <h2
+            className="text-4xl md:text-5xl text-white uppercase mb-6"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            The KAOSMT Academy
+          </h2>
+          <div className="w-14 h-[3px] bg-red-600 mb-8" />
+          <p className="text-neutral-300 text-lg leading-relaxed mb-10 max-w-2xl">
+            Our Helena facility is designed to support serious training in a clean,
+            professional environment.
+          </p>
+          <ul className="grid sm:grid-cols-2 gap-y-3 gap-x-10">
+            {facilityHighlights.map((item) => (
+              <li key={item} className="flex items-start gap-3 text-neutral-300 text-sm">
+                <span className="text-red-600 font-bold mt-0.5 flex-shrink-0">—</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-neutral-900 py-24 px-6 text-center">
+        <div className="max-w-[1080px] mx-auto">
+          <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-4">
+            Our Values
+          </p>
+          <h2
+            className="text-4xl md:text-5xl text-white uppercase mb-6"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Strength. Discipline. Focus.
+          </h2>
+          <div className="w-14 h-[3px] bg-red-600 mx-auto mb-14" />
+
+          <div className="grid sm:grid-cols-3 gap-px bg-white/5 mb-14">
+            {values.map((v) => (
+              <div key={v.word} className="bg-neutral-950 p-10">
+                <h3
+                  className="text-2xl text-white uppercase mb-4"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  {v.word}
+                </h3>
+                <p className="text-neutral-400 text-sm leading-relaxed">{v.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-neutral-400 text-base leading-relaxed mb-10">
+            These principles guide the way we train, coach, and build the KAOSMT community.
+          </p>
+
+          <Button href="#contact-form" size="lg">
+            Start Training
+          </Button>
         </div>
       </section>
 

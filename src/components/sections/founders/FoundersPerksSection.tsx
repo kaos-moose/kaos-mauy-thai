@@ -28,7 +28,7 @@ const perks = [
 export default function FoundersPerksSection() {
   return (
     <section className="bg-neutral-950 py-20 px-4">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-[1080px] mx-auto">
         <div className="text-center mb-14">
           <p className="text-red-500 text-xs font-bold uppercase tracking-widest mb-3">
             Exclusive Benefits

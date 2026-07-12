@@ -8,7 +8,7 @@ import { dynamo, FOUNDERS_TABLE, type FounderRecord } from "@/lib/dynamo";
 
 const membershipLabels: Record<string, string> = {
   "muay-thai": "Muay Thai Only",
-  "krav-maga": "Krav Maga Only",
+  "krav-maga": "Self Defense Only",
   "full-access": "Full Access (Both)",
 };
 

@@ -15,11 +15,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kaos Muay Thai & Krav Maga | Helena's Newest Martial Arts Academy",
+  title: "Kaos Muay Thai & Self Defense | Helena's Newest Martial Arts Academy",
   description:
     "Train for fitness, learn real self-defense, and build confidence at Kaos Muay Thai. Founding memberships now available in Helena, MT. Limited to 50 spots.",
   openGraph: {
-    title: "Kaos Muay Thai & Krav Maga | Helena's Newest Martial Arts Academy",
+    title: "Kaos Muay Thai & Self Defense | Helena's Newest Martial Arts Academy",
     description:
       "Train for fitness, learn real self-defense, and build confidence. Founding memberships now available — limited to 50 spots.",
     type: "website",

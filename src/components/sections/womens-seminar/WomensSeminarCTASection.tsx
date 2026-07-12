@@ -3,7 +3,7 @@ import { ShieldCheckIcon } from "@/components/ui/Icons";
 export default function WomensSeminarCTASection() {
   return (
     <section id="register" className="bg-neutral-950 border-t border-white/5 py-16 px-6">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="max-w-[1080px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         <div>
           <p
             className="text-red-600 text-xs font-bold uppercase tracking-[0.25em] mb-2"

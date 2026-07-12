@@ -7,7 +7,7 @@ const consequences = [
 export default function CharterUrgencySection() {
   return (
     <section className="bg-neutral-950 py-20 px-4">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-[1080px] mx-auto">
         <div className="border border-red-600/50 bg-red-950/10 p-10 md:p-14 text-center">
           <div className="inline-block bg-red-600 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 mb-8">
             Limited Availability

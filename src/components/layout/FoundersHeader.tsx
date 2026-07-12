@@ -1,7 +1,7 @@
 export default function FoundersHeader() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/95 backdrop-blur-sm border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-6">
+      <div className="max-w-[1080px] mx-auto px-6 py-3 flex items-center justify-between gap-6">
         <a href="/founders" className="flex-shrink-0">
           <div
             className="text-2xl text-white uppercase leading-none"

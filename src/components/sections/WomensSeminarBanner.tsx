@@ -1,7 +1,7 @@
 export default function WomensSeminarBanner() {
   return (
     <section className="bg-red-600 py-6 px-6">
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div className="max-w-[1080px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
         <div>
           <p className="text-black/60 text-[10px] font-bold uppercase tracking-widest mb-1">
             July 11 · 9:00 AM – Noon · $100
@@ -10,7 +10,7 @@ export default function WomensSeminarBanner() {
             className="text-black text-2xl md:text-3xl uppercase leading-tight"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Women&rsquo;s Krav Maga Seminar
+            Women&rsquo;s Self Defense Seminar
           </p>
         </div>
 

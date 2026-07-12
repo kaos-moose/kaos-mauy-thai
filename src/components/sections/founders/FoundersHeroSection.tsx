@@ -8,7 +8,7 @@ export default function FoundersHeroSection() {
       style={{ minHeight: "min(100vh, 720px)" }}
     >
       <Image
-        src="/hero-pic-3.webp"
+        src="/kaos-mt-hero-banner-2.jpg"
         fill
         alt="Kaos Muay Thai fighters training"
         className="object-cover hidden md:block"
@@ -53,7 +53,7 @@ export default function FoundersHeroSection() {
           <div className="w-14 h-[3px] bg-red-600 mb-6 mx-auto md:mx-0" />
 
           <p className="text-neutral-300 text-base md:text-lg mb-10 max-w-md mx-auto md:mx-0">
-            Helena&apos;s newest Muay Thai + Krav Maga training community is opening soon.
+            Helena&apos;s newest Muay Thai + Self Defense training community is opening soon.
             Lock in Founder pricing, exclusive perks, and permanent Founder status before
             all 50 spots are gone.
           </p>

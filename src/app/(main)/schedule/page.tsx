@@ -1,168 +1,167 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Class Schedule | KAOSMT Helena, MT",
+  title: "Class Schedule | KAOSMT — Helena, MT",
   description:
-    "View the Muay Thai and Krav Maga class schedule at KAOSMT — Helena, Montana's new martial arts academy. Opening soon.",
+    "View the KAOSMT class schedule for Muay Thai, KAOS Self-Defense System, and Strength & Conditioning in Helena, Montana.",
 };
 
-const schedule = [
-  { day: "Monday", kravMaga: "5:00–6:00 PM", muayThai: "6:00–7:00 PM" },
-  { day: "Tuesday", kravMaga: "6:00–7:00 PM", muayThai: "5:00–6:00 PM" },
-  { day: "Wednesday", kravMaga: "5:00–6:00 PM", muayThai: "6:00–7:00 PM" },
-  { day: "Thursday", kravMaga: "6:00–7:00 PM", muayThai: "5:00–6:00 PM" },
-  { day: "Saturday", kravMaga: "9:00–10:00 AM", muayThai: "10:00–11:30 AM" },
-];
-
-const pricing = [
-  { membership: "Muay Thai Only", regular: "$130/mo", charter: "$120/mo", best: false },
-  { membership: "Krav Maga Only", regular: "$130/mo", charter: "$120/mo", best: false },
-  { membership: "Unlimited", regular: "$170/mo", charter: "$160/mo", best: true },
+const firstClassInfo = [
+  {
+    program: "For Muay Thai",
+    items: [
+      "Athletic clothing",
+      "Water",
+      "Hand wraps and gloves if you own them — loaner equipment is available",
+    ],
+  },
+  {
+    program: "For KAOS Self-Defense System",
+    items: [
+      "Athletic clothing",
+      "Clean indoor training shoes or bare feet",
+      "Water",
+      "No specialized equipment required for the first class",
+    ],
+  },
+  {
+    program: "For Strength & Conditioning",
+    items: [
+      "Athletic clothing",
+      "Water",
+      "Training gloves if desired",
+      "Towel recommended",
+    ],
+  },
 ];
 
 export default function SchedulePage() {
   return (
-    <main className="bg-neutral-950 min-h-screen pt-32 pb-24 px-4">
-      <div className="max-w-4xl mx-auto">
+    <main className="bg-neutral-950">
 
-        {/* Schedule */}
-        <div className="text-center mb-16">
+      {/* Hero */}
+      <section className="relative pt-36 pb-20 px-6 overflow-hidden" style={{ minHeight: "min(60vh, 480px)" }}>
+        <Image
+          src="/kaos-mt-hero-banner-1.webp"
+          fill
+          alt="KAOSMT training"
+          className="object-cover"
+          style={{ objectPosition: "center" }}
+          priority
+        />
+        <div className="absolute inset-0 bg-neutral-950/55" />
+        <div className="relative z-10 max-w-[1080px] mx-auto flex flex-col justify-center h-full">
+          <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-4">
+            Schedule
+          </p>
           <h1
-            className="text-5xl md:text-6xl text-white uppercase"
+            className="text-5xl sm:text-6xl md:text-7xl text-white uppercase leading-none mb-6"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Class Schedule
+            Build Training Into{" "}
+            <span className="text-red-600">Your Week</span>
           </h1>
-          <div className="w-14 h-[3px] bg-red-600 mt-6 mx-auto" />
+          <div className="w-14 h-[3px] bg-red-600 mb-8" />
+          <p className="text-neutral-300 text-xl mb-4 max-w-2xl leading-relaxed">
+            Choose the program and time that works for you.
+          </p>
+          <p className="text-neutral-400 text-base max-w-2xl leading-relaxed">
+            Classes are coach-led and structured for both new and experienced
+            students. Arrive at least 10 minutes early for your first class.
+          </p>
         </div>
+      </section>
 
-        <p className="text-center text-neutral-400 text-sm mb-6">
-          Official schedule starts July 18th — switch the calendar to the week of July 12th to see the current schedule. Once the calendar loads click the 18th and the schedule will update.
-        </p>
+      {/* Schedule Embed */}
+      <section className="bg-neutral-900 py-20 px-6">
+        <div className="max-w-[1080px] mx-auto">
+          <p className="text-neutral-300 text-lg mb-8">
+            Select a class below to view details and reserve your spot.
+          </p>
 
-        <div className="overflow-x-auto">
-          <div className="gymdesk-schedule" attr-gym="AnQgQ" attr-program="all"></div>
-          {/* <table className="w-full">
-            <thead>
-              <tr className="border-b border-white/10">
-                <th className="text-left text-neutral-400 text-xs uppercase tracking-widest font-bold py-4 pr-8 min-w-[120px]">
-                  Day
-                </th>
-                <th className="text-left text-neutral-400 text-xs uppercase tracking-widest font-bold py-4 pr-8">
-                  Krav Maga
-                </th>
-                <th className="text-left text-neutral-400 text-xs uppercase tracking-widest font-bold py-4">
-                  Muay Thai
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {schedule.map((row, i) => (
-                <tr
-                  key={row.day}
-                  className={`border-b border-white/5 ${i % 2 === 0 ? "bg-neutral-900/30" : ""}`}
-                >
-                  <td
-                    className="text-white font-bold uppercase text-sm py-5 pr-8"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
-                    {row.day}
-                  </td>
-                  <td className="text-neutral-300 text-sm py-5 pr-8">{row.kravMaga}</td>
-                  <td className="text-neutral-300 text-sm py-5">{row.muayThai}</td>
-                </tr>
-              ))} 
-              
-            </tbody>
-          </table> */}
+          <div className="gymdesk-schedule" attr-gym="AnQgQ" attr-program="all" />
         </div>
+      </section>
 
-        <div className="text-center mt-10">
-          <a
-            href="https://kaosmt.gymdesk.com/signup/v/An7yd"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-bold uppercase tracking-widest text-sm px-8 py-4 transition-colors duration-200"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            Sign Up Now
-            <span className="text-base leading-none">&rsaquo;</span>
-          </a>
-        </div>
-
-        {/* Charter Pricing */}
-        <div className="mt-28 text-center mb-16">
-          <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-3">
-            Exclusive Rates
+      {/* First-Class Information */}
+      <section className="py-20 px-6">
+        <div className="max-w-[1080px] mx-auto">
+          <p className="text-red-600 text-xs font-bold uppercase tracking-widest mb-4">
+            First-Class Information
           </p>
           <h2
-            className="text-5xl md:text-6xl text-white uppercase"
+            className="text-4xl md:text-5xl text-white uppercase mb-6"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Charter Pricing
+            Your First Class
           </h2>
-          <div className="w-14 h-[3px] bg-red-600 mt-5 mx-auto" />
+          <div className="w-14 h-[3px] bg-red-600 mb-12" />
+
+          <div className="grid sm:grid-cols-3 gap-px bg-white/5">
+            {firstClassInfo.map((block) => (
+              <div key={block.program} className="bg-neutral-950 p-8">
+                <p
+                  className="text-white text-sm font-bold uppercase tracking-widest mb-6"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  {block.program}
+                </p>
+                <ul className="space-y-3">
+                  {block.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-neutral-400 text-sm leading-relaxed">
+                      <span className="text-red-600 font-bold mt-0.5 flex-shrink-0">—</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-neutral-500 text-sm mt-8 border-l-2 border-red-600 pl-5">
+            Please tell the coach about any injuries or physical limitations
+            before class begins.
+          </p>
         </div>
+      </section>
 
-        <div className="overflow-x-auto">
-          <table className="w-full border border-white/10">
-            <thead>
-              <tr className="bg-neutral-800">
-                <th className="text-left text-neutral-400 text-xs uppercase tracking-widest font-bold px-6 py-4">
-                  Membership
-                </th>
-                <th className="text-left text-neutral-400 text-xs uppercase tracking-widest font-bold px-6 py-4">
-                  Regular Rate
-                </th>
-                <th className="text-left text-red-600 text-xs uppercase tracking-widest font-bold px-6 py-4">
-                  Charter Rate
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {pricing.map((row) => (
-                <tr key={row.membership} className="border-t border-white/10">
-                  <td className="px-6 py-5">
-                    <span
-                      className="text-white font-bold uppercase text-sm"
-                      style={{ fontFamily: "var(--font-display)" }}
-                    >
-                      {row.membership}
-                    </span>
-                    {row.best && (
-                      <span className="ml-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 align-middle">
-                        Best Value
-                      </span>
-                    )}
-                  </td>
-                  <td className="px-6 py-5 text-neutral-500 text-sm line-through">
-                    {row.regular}
-                  </td>
-                  <td className="px-6 py-5 text-red-500 font-bold text-lg">
-                    {row.charter}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {/* CTA */}
+      <section className="bg-neutral-900 py-20 px-6">
+        <div className="max-w-[1080px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+          {/* Left: content */}
+          <div>
+            <h2
+              className="text-3xl md:text-4xl text-white uppercase mb-6 leading-tight"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              Cannot Find a Class Time That Works?
+            </h2>
+            <p className="text-neutral-400 text-lg leading-relaxed mb-10">
+              Contact us and tell us which program and time you are looking for.
+              Our schedule will continue to expand as the academy grows.
+            </p>
+            <Button href="/contact" size="lg">
+              Contact KAOSMT
+            </Button>
+          </div>
+
+          {/* Right: image */}
+          <div className="relative w-full h-[500px]">
+            <Image
+              src="/kaso-self-defense-pic-5.png"
+              alt="Self-defense training at KAOS Muay Thai"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+
         </div>
+      </section>
 
-        <p className="text-center text-neutral-500 text-xs uppercase tracking-widest mt-6 mb-10">
-          Charter pricing is locked in for life while membership remains active.
-        </p>
-
-        <div className="text-center">
-          <a
-            href="/charter"
-            className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-bold uppercase tracking-widest text-sm px-8 py-4 transition-colors duration-200"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            Lock In My Charter Rate
-            <span className="text-base leading-none">&rsaquo;</span>
-          </a>
-        </div>
-
-      </div>
     </main>
   );
 }

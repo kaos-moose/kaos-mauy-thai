@@ -10,7 +10,7 @@ const perks = [
 export default function FoundingMemberSection() {
   return (
     <section className="bg-neutral-950 py-24 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-[1080px] mx-auto">
         <div className="border border-red-600/40 bg-red-950/10 p-10 md:p-16 text-center">
           <div className="inline-block bg-red-600 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 mb-8">
             Limited to 50 Members

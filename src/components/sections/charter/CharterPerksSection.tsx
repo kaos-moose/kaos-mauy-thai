@@ -1,7 +1,7 @@
 const perks = [
   {
     title: "Discounted Pre-Opening Rate",
-    desc: "$120/mo for Muay Thai or Krav Maga, $160/mo for Unlimited — locked in before regular pricing takes effect.",
+    desc: "$120/mo for Muay Thai or Self Defense, $160/mo for Unlimited — locked in before regular pricing takes effect.",
   },
   {
     title: "Access to Preview Classes",
@@ -16,7 +16,7 @@ const perks = [
 export default function CharterPerksSection() {
   return (
     <section className="bg-neutral-950 py-20 px-4">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-[1080px] mx-auto">
         <div className="text-center mb-14">
           <p className="text-red-500 text-xs font-bold uppercase tracking-widest mb-3">
             Charter Benefits

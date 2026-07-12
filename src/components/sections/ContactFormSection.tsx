@@ -15,7 +15,7 @@ interface FormState {
 const membershipOptions = [
   { value: "", label: "Select a membership..." },
   { value: "muay-thai", label: "Muay Thai Only" },
-  { value: "krav-maga", label: "Krav Maga Only" },
+  { value: "krav-maga", label: "Self Defense Only" },
   { value: "full-access", label: "Full Access (Both)" },
 ];
 
@@ -62,7 +62,7 @@ export default function ContactFormSection() {
   return (
     <section id="contact-form" className="relative py-24 px-4 overflow-hidden">
       <Image
-        src="/section-5.jpg"
+        src="/kaos-mt-hero-banner-1.webp"
         fill
         alt=""
         className="object-cover object-center opacity-50"
@@ -74,7 +74,7 @@ export default function ContactFormSection() {
             className="text-4xl md:text-5xl text-neutral-900 uppercase mb-4"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Claim Your Founding Membership
+            Sign Up Information
           </h2>
           <p className="text-neutral-500">
             Enter your info below and we&apos;ll contact you to reserve your spot and

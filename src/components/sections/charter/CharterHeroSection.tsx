@@ -8,7 +8,7 @@ export default function CharterHeroSection() {
       style={{ minHeight: "min(100vh, 720px)" }}
     >
       <Image
-        src="/hero-pic-3.webp"
+        src="/kaos-mt-hero-banner-2.jpg"
         fill
         alt="Kaos Muay Thai fighters training"
         className="object-cover hidden md:block"

@@ -3,41 +3,44 @@ import Button from "@/components/ui/Button";
 
 export default function FinalCTASection() {
   return (
-    <section className="relative py-24 px-4 text-center overflow-hidden">
+    <section className="bg-neutral-950 py-24 px-6">
+      <div className="max-w-[1080px] mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-      {/* Background image */}
-      <Image
-        src="/section-3.webp"
-        fill
-        alt=""
-        className="object-cover object-center opacity-50"
-      />
+        {/* Left: content */}
+        <div>
+          <h2
+            className="text-4xl md:text-6xl text-white uppercase leading-tight mb-10"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Stop Waiting to{" "}
+            <span className="text-red-600">Feel Ready</span>
+          </h2>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-3xl mx-auto bg-white/80 px-10 py-16">
-        <h2
-          className="text-4xl md:text-6xl text-neutral-900 uppercase leading-tight mb-6"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          Don&apos;t Miss Your
-          <br />
-          <span className="text-red-600">Founding Member Spot</span>
-        </h2>
+          <div className="space-y-4 mb-12 text-neutral-400 text-lg leading-relaxed">
+            <p>You do not need to be in shape before you begin.</p>
+            <p>You do not need previous experience.</p>
+            <p className="text-white font-medium">
+              You only need to take the first step.
+            </p>
+          </div>
 
-        <p className="text-neutral-700 text-xl mb-4">
-          We&apos;re only accepting a limited number of members before opening.
-        </p>
+          <Button href="#contact-form" size="lg" className="text-lg px-10 py-5">
+            Start Training
+          </Button>
+        </div>
 
-        <p className="text-neutral-400 mb-12">
-          Join now and be part of Helena&apos;s newest Muay Thai &amp; self-defense
-          academy.
-        </p>
+        {/* Right: image */}
+        <div className="relative w-full h-[500px]">
+          <Image
+            src="/kaso-self-defense-pic-1.png"
+            alt="Self-defense training at KAOS Muay Thai"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
 
-        <Button href="#contact-form" size="lg" className="text-lg px-10 py-5">
-          Claim Your Spot Now
-        </Button>
       </div>
-
     </section>
   );
 }

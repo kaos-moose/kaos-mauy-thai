@@ -30,7 +30,7 @@ export default function WomensSeminarForWhoSection() {
         className="object-cover object-center opacity-40"
       />
 
-      <div className="relative z-10 max-w-3xl mx-auto bg-neutral-950/60 px-8 md:px-14 py-14 text-center border border-white/8">
+      <div className="relative z-10 max-w-[1080px] mx-auto bg-neutral-950/60 px-8 md:px-14 py-14 text-center border border-white/8">
         <p className="text-red-500 text-xs font-bold uppercase tracking-widest mb-3">
           Is This You?
         </p>
@@ -44,7 +44,7 @@ export default function WomensSeminarForWhoSection() {
 
         <p className="text-neutral-300 text-base md:text-lg mb-10 max-w-md mx-auto">
           Women who want a practical introduction to self-defense, personal
-          safety, confidence, and Krav Maga fundamentals.
+          safety, confidence, and Self Defense fundamentals.
         </p>
 
         <div className="grid grid-cols-2 gap-6 max-w-sm mx-auto">

@@ -18,9 +18,9 @@ export default function CharterWhyKAOSSection() {
         alt=""
         className="object-cover object-center opacity-40"
       />
-      <div className="relative z-10 max-w-3xl mx-auto bg-neutral-950/90 px-8 md:px-14 py-14 text-center border border-white/8">
+      <div className="relative z-10 max-w-[1080px] mx-auto bg-neutral-950/90 px-8 md:px-14 py-14 text-center border border-white/8">
         <p className="text-red-500 text-xs font-bold uppercase tracking-widest mb-3">
-          Muay Thai + Krav Maga Under One Roof
+          Muay Thai + Self Defense Under One Roof
         </p>
         <h2
           className="text-3xl md:text-5xl text-white uppercase leading-tight mb-5"

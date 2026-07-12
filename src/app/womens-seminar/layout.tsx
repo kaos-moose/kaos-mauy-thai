@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Women's Intro to Self-Defense Seminar | KAOSMT Helena, MT",
   description:
-    "A beginner-friendly 3-hour Krav Maga seminar for women. Learn situational awareness, basic combatives, and how to use the adrenal response. July 11 · 9 AM–Noon · $100.",
+    "A beginner-friendly 3-hour Self Defense seminar for women. Learn situational awareness, basic combatives, and how to use the adrenal response. July 11 · 9 AM–Noon · $100.",
   openGraph: {
     title: "Women's Intro to Self-Defense Seminar | KAOSMT",
     description:

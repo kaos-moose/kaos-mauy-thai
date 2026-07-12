@@ -3,7 +3,7 @@ const standards = ["Hard work", "Mutual respect", "No ego"];
 export default function CharterTrustSection() {
   return (
     <section className="bg-neutral-900 py-20 px-4">
-      <div className="max-w-3xl mx-auto text-center">
+      <div className="max-w-[1080px] mx-auto text-center">
         <p className="text-red-500 text-xs font-bold uppercase tracking-widest mb-3">
           The KAOSMT Standard
         </p>

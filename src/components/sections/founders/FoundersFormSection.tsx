@@ -15,7 +15,7 @@ interface FormState {
 const membershipOptions = [
   { value: "", label: "Select a membership..." },
   { value: "muay-thai", label: "Muay Thai Only" },
-  { value: "krav-maga", label: "Krav Maga Only" },
+  { value: "krav-maga", label: "Self Defense Only" },
   { value: "full-access", label: "Full Access (Both)" },
 ];
 

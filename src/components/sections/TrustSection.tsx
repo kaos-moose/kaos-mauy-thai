@@ -19,7 +19,7 @@ export default function TrustSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl mx-auto bg-white/80 px-10 py-16 text-center">
+      <div className="relative z-10 max-w-[1080px] mx-auto bg-white/80 px-10 py-16 text-center">
         <h2
           className="text-4xl md:text-6xl text-neutral-900 uppercase mb-6"
           style={{ fontFamily: "var(--font-display)" }}

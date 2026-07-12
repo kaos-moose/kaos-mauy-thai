@@ -1,13 +1,13 @@
 const tiers = [
   { name: "Muay Thai Only", regular: "$130/mo", charter: "$120/mo" },
-  { name: "Krav Maga Only", regular: "$130/mo", charter: "$120/mo" },
+  { name: "Self Defense Only", regular: "$130/mo", charter: "$120/mo" },
   { name: "Unlimited", regular: "$170/mo", charter: "$160/mo", highlight: true },
 ];
 
 export default function CharterPricingSection() {
   return (
     <section className="bg-neutral-900 py-20 px-4">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-[1080px] mx-auto">
         <div className="text-center mb-12">
           <p className="text-red-500 text-xs font-bold uppercase tracking-widest mb-3">
             Pre-Opening Rates

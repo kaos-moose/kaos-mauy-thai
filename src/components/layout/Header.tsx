@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Charter Membership", href: "/charter" },
+  { label: "Classes", href: "/classes" },
   { label: "Schedule", href: "/schedule" },
   { label: "About KAOSMT", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/95 backdrop-blur-sm border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-6">
+      <div className="max-w-[1080px] mx-auto px-6 py-3 flex items-center justify-between gap-6">
         <a href="/" className="flex-shrink-0 flex flex-col items-center">
           <Image
             src="/kaos-shield-logo.webp"
@@ -28,7 +28,7 @@ export default function Header() {
             priority
           />
           <div className="text-white/30 text-[9px] uppercase tracking-[0.2em] mt-0.5">
-            Muay Thai | Krav Maga
+            Muay Thai | Self Defense
           </div>
         </a>
 
@@ -45,11 +45,13 @@ export default function Header() {
         </nav>
 
         <Button
-          href="/charter"
+          href="https://kaosmt.gymdesk.com/signup/v/An7yd"
+          target="_blank"
+          rel="noopener noreferrer"
           size="md"
           className="hidden md:inline-block flex-shrink-0 text-xs tracking-widest whitespace-nowrap"
         >
-          Claim Your Charter Spot
+          Sign Up Today
         </Button>
 
         <button
@@ -95,8 +97,8 @@ export default function Header() {
             </a>
           ))}
           <div className="pt-4">
-            <Button href="/charter" size="md" className="w-full text-center text-xs tracking-widest">
-              Claim Your Charter Spot
+            <Button href="https://kaosmt.gymdesk.com/signup/v/An7yd" target="_blank" rel="noopener noreferrer" size="md" className="w-full text-center text-xs tracking-widest">
+              Sign Up Today
             </Button>
           </div>
         </div>

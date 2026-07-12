@@ -12,7 +12,7 @@ const solutions = [
     desc: "Striking, conditioning, discipline — the art of eight limbs",
   },
   {
-    title: "Krav Maga",
+    title: "Self Defense",
     desc: "Practical, real-world self-defense built for real situations",
   },
 ];
@@ -30,7 +30,7 @@ export default function ProblemSolutionSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto bg-white/80 px-10 py-16">
+      <div className="relative z-10 max-w-[1080px] mx-auto bg-white/80 px-10 py-16">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24">
 
           {/* Problem */}

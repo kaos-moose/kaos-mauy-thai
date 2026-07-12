@@ -1,7 +1,7 @@
 export default function FoundersWhySection() {
   return (
     <section className="bg-neutral-900 py-20 px-4">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-[1080px] mx-auto">
         <div className="text-center mb-10">
           <h2
             className="text-3xl md:text-5xl text-white uppercase leading-tight mb-4"

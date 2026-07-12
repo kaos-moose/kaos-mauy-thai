@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "KAOSMT Founders Membership | Helena, MT",
   description:
-    "Become a KAOSMT founding member — early access, beginner-friendly classes, Muay Thai and Krav Maga training. Limited spots available in Helena, MT.",
+    "Become a KAOSMT founding member — early access, beginner-friendly classes, Muay Thai and Self Defense training. Limited spots available in Helena, MT.",
   openGraph: {
     title: "KAOSMT Founders Membership | Helena, MT",
     description:

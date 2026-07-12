@@ -2,6 +2,8 @@ import { type ButtonHTMLAttributes } from "react";
 
 type ButtonProps = {
   href?: string;
+  target?: string;
+  rel?: string;
   children: React.ReactNode;
   size?: "md" | "lg";
   className?: string;
@@ -9,6 +11,8 @@ type ButtonProps = {
 
 export default function Button({
   href,
+  target,
+  rel,
   children,
   size = "lg",
   className = "",
@@ -21,7 +25,7 @@ export default function Button({
 
   if (href) {
     return (
-      <a href={href} className={`inline-block ${cls}`}>
+      <a href={href} target={target} rel={rel} className={`inline-block ${cls}`}>
         {children}
       </a>
     );

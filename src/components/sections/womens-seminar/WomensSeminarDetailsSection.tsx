@@ -32,7 +32,7 @@ const details: DetailCard[] = [
 export default function WomensSeminarDetailsSection() {
   return (
     <section className="bg-neutral-900 py-16 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-[1080px] mx-auto">
         <div className="flex items-center gap-4 mb-12 justify-center">
           <div className="flex-1 max-w-[80px] h-px bg-red-600" />
           <h2

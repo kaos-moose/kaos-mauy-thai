@@ -8,7 +8,7 @@ import { dynamo, CHARTER_TABLE, type CharterRecord } from "@/lib/dynamo";
 
 const membershipLabels: Record<string, string> = {
   "muay-thai": "Muay Thai Only ($120/mo)",
-  "krav-maga": "Krav Maga Only ($120/mo)",
+  "krav-maga": "Self Defense Only ($120/mo)",
   "unlimited": "Unlimited ($160/mo)",
 };
 

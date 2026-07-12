@@ -1,17 +1,15 @@
 import HeroSection from "@/components/sections/HeroSection";
-import WomensSeminarBanner from "@/components/sections/WomensSeminarBanner";
-import WhySection from "@/components/sections/WhySection";
 import ProgramsSection from "@/components/sections/ProgramsSection";
+import WhySection from "@/components/sections/WhySection";
+import FinalCTASection from "@/components/sections/FinalCTASection";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      <WomensSeminarBanner />
+      <ProgramsSection />
       <WhySection />
-      <div id="programs">
-        <ProgramsSection />
-      </div>
+      <FinalCTASection />
     </main>
   );
 }

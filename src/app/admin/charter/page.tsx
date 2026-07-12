@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 const membershipLabels: Record<string, string> = {
   "muay-thai": "Muay Thai Only",
-  "krav-maga": "Krav Maga Only",
+  "krav-maga": "Self Defense Only",
   "unlimited": "Unlimited",
 };
 

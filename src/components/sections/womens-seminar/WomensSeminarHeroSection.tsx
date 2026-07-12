@@ -37,7 +37,7 @@ export default function WomensSeminarHeroSection() {
             className="text-red-600 text-xs font-bold uppercase tracking-[0.25em] mb-4"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Krav Maga Survival Concepts + Strategies
+            Self Defense Survival Concepts + Strategies
           </p>
 
           <div className="w-10 h-[2px] bg-red-600 mb-6" />

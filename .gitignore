@@ -15,6 +15,7 @@
 
 # Testing
 /coverage
+.playwright-mcp/
 
 # Env files
 .env*
