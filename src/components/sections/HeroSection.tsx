@@ -57,7 +57,7 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
-          <Button href="#contact-form" size="lg">
+          <Button href="/contact" size="lg">
             Start Training
           </Button>
           <a

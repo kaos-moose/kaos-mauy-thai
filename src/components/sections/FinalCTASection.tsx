@@ -24,7 +24,7 @@ export default function FinalCTASection() {
             </p>
           </div>
 
-          <Button href="#contact-form" size="lg" className="text-lg px-10 py-5">
+          <Button href="/contact" size="lg" className="text-lg px-10 py-5">
             Start Training
           </Button>
         </div>

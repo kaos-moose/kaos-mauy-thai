@@ -57,7 +57,7 @@ export default function ProgramsSection() {
                     {program.description}
                   </p>
                   <div>
-                    <Button href="/schedule" size="md">
+                    <Button href="/classes" size="md">
                       {program.buttonLabel}
                     </Button>
                   </div>

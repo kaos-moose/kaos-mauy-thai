@@ -339,7 +339,7 @@ export default function AboutPage() {
             These principles guide the way we train, coach, and build the KAOSMT community.
           </p>
 
-          <Button href="#contact-form" size="lg">
+          <Button href="/contact" size="lg">
             Start Training
           </Button>
         </div>
