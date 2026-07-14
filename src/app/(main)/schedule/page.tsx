@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import StarterPassModal from "@/components/ui/StarterPassModal";
 
 export const metadata: Metadata = {
   title: "Class Schedule | KAOSMT — Helena, MT",
@@ -40,6 +41,7 @@ const firstClassInfo = [
 export default function SchedulePage() {
   return (
     <main className="bg-neutral-950">
+      <StarterPassModal />
 
       {/* Hero */}
       <section className="relative pt-36 pb-20 px-6 overflow-hidden" style={{ minHeight: "min(60vh, 480px)" }}>
